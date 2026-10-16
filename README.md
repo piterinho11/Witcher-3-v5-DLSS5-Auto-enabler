@@ -3,7 +3,7 @@
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-blue.svg)](https://microsoft.com/windows)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-brightgreen.svg)](https://python.org)
-[![Game Version](https://img.shields.io/badge/Witcher%203-v4.00%2B%20Next--Gen%20(DX12)-orange.svg)](https://www.thewitcher.com)
+[![Game Version](https://img.shields.io/badge/Witcher%203-v5.00%2B%20Next--Gen%20(DX12)-orange.svg)](https://www.thewitcher.com)
 [![OptiScaler](https://img.shields.io/badge/OptiScaler-Compatible-purple.svg)](https://github.com/cdozdil/OptiScaler)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/External%20Deps-Zero%20(Standard%20Lib%20Only)-success.svg)](https://docs.python.org/3/library/)
