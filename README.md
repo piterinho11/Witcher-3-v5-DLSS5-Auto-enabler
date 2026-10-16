@@ -43,7 +43,7 @@ The Witcher 3: Wild Hunt v5 provide incredible visual fidelity and cinematic smo
 
 | Component | Requirement |
 | **Upscaler / Injection** | [OptiScaler](https://github.com/cdozdil/OptiScaler) installed in `<GameDir>\bin\x64_dx12\` (`dxgi.dll` + `OptiScaler.ini`) | Im using DLSS5 Autopilot from https://github.com/Kizzuwatnaa/DLSS5-Autopilot
-| **Python** | Python 3.8+ (64-bit) *or* precompiled `.exe` |
+| **Python** | Python 3.8+ (64-bit) |
 | **Privileges** | Administrator rights (handled automatically via UAC prompt) |
 
 ---
@@ -64,10 +64,7 @@ Once again I reccomend DLSS 5 Autopilot
 
 ### 2. Running the Tool
 1. Download or clone this repository.
-2. Launch `3 Wiedźmin 3 Najlepszy.py` (or the compiled executable):
-   ```powershell
-   python "3 Wiedźmin 3 Najlepszy.py"
-   ```
+2. Launch `3 Wiedźmin 3 Najlepszy.py` 
 3. Grant administrator permissions when prompted by Windows UAC.
 4. If it's your first run, the tool will automatically detect your game and user directories. If not detected automatically, a folder selection dialog will open once and save your choice to `dlss5_config.json`.
 5. Launch **The Witcher 3** and load your save!
@@ -163,19 +160,6 @@ This command will:
 3. Restore original XML configuration files (`hidden.xml`, `gameplay.xml`).
 4. Remove mod entries from `mods.settings`.
 5. Clear compiled `.redscripts` cache.
-
----
-
-## 📦 Building a Standalone Executable (.exe)
-
-If you wish to compile the script into a standalone `.exe` using **PyInstaller**:
-```powershell
-pip install pyinstaller
-pyinstaller --onefile --name "DLSS5_Witcher3" "3 Wiedźmin 3 Najlepszy.py"
-```
-The resulting `dist\DLSS5_Witcher3.exe` contains full administrator elevation and frozen runtime support out of the box.
-
----
 
 ## ❓ Troubleshooting & FAQ
 
