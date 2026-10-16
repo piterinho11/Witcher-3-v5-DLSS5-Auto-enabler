@@ -1,5 +1,5 @@
-# DLSS 5 - 3 Wiedźmin 3, Najlepszy
-### Automated, Zero-Overhead DLSS / Frame Generation Switcher for The Witcher 3: Wild Hunt (Next-Gen DX12)
+# DLSS 5 - 3 Wiedźmin 3, Najlepszy - 100% vreated by Gemini, including this readme
+### Automated, Zero-Overhead DLSS / Frame Generation Switcher for The Witcher 3: Wild Hunt v5
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-blue.svg)](https://microsoft.com/windows)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-brightgreen.svg)](https://python.org)
@@ -12,15 +12,15 @@
 
 ## 📖 Overview
 
-In **The Witcher 3: Wild Hunt (Next-Gen DX12)**, advanced upscaling and frame generation techniques (DLSS 3/3.7, FSR 3 FG, XeSS, DLSS Neural Rendering) via **OptiScaler** provide incredible visual fidelity and cinematic smoothness. However, many players prefer native rendering, ultra-low input latency, and zero motion ghosting during active combat and open-world exploration, while wanting maximum quality and high frame rates during dialogue and cutscenes.
+The Witcher 3: Wild Hunt v5 provide incredible visual fidelity and cinematic smoothness. However, many players prefer native rendering, ultra-low input latency, and zero motion ghosting during active combat and open-world exploration, while wanting maximum quality and high frame rates during dialogue and cutscenes.
 
-**DLSS 5 - 3 Wiedźmin 3, Najlepszy** is an intelligent, zero-overhead background service that seamlessly and automatically toggles OptiScaler / DLSS on during dialogues and cutscenes, and restores your preferred settings during gameplay.
+**DLSS 5 - 3 Wiedźmin 3, Najlepszy** is an intelligent, zero-overhead background service that seamlessly and automatically toggles OptiScaler / DLSS5 on during dialogues and cutscenes, and restores your preferred settings during gameplay.
 
 ---
 
 ## ✨ Key Features
 
-* **🎭 Seamless Cutscene & Dialogue Automation**: Automatically activates DLSS / Frame Generation during NPC conversations, pre-rendered cutscenes, scene transitions, and intro cinematics.
+* **🎭 Seamless Cutscene & Dialogue Automation**: Automatically activates DLSS 5 during NPC conversations, pre-rendered cutscenes, scene transitions, and in-engine cinematics.
 * **🧠 Smart State Restoration**: Remembers your preference!
   * If DLSS was **OFF** before a dialogue, it turns **ON** for the scene, and automatically turns back **OFF** when you regain control.
   * If you manually turned DLSS **ON** during exploration or combat, it **remains ON** after cutscenes.
@@ -42,10 +42,7 @@ In **The Witcher 3: Wild Hunt (Next-Gen DX12)**, advanced upscaling and frame ge
 ## 🖥️ System Requirements
 
 | Component | Requirement |
-|---|---|
-| **Operating System** | Windows 10 / 11 64-bit |
-| **Game Version** | The Witcher 3: Wild Hunt (v4.00+ Next-Gen update, **DirectX 12** mode) |
-| **Upscaler / Injection** | [OptiScaler](https://github.com/cdozdil/OptiScaler) installed in `<GameDir>\bin\x64_dx12\` (`dxgi.dll` + `OptiScaler.ini`) |
+| **Upscaler / Injection** | [OptiScaler](https://github.com/cdozdil/OptiScaler) installed in `<GameDir>\bin\x64_dx12\` (`dxgi.dll` + `OptiScaler.ini`) | Im using DLSS5 Autopilot from https://github.com/Kizzuwatnaa/DLSS5-Autopilot
 | **Python** | Python 3.8+ (64-bit) *or* precompiled `.exe` |
 | **Privileges** | Administrator rights (handled automatically via UAC prompt) |
 
@@ -54,7 +51,7 @@ In **The Witcher 3: Wild Hunt (Next-Gen DX12)**, advanced upscaling and frame ge
 ## 🚀 Quick Start Guide
 
 ### 1. Prerequisites
-Ensure that **The Witcher 3** is updated to the Next-Gen version and that you have **OptiScaler** installed in your game's DirectX 12 folder:
+Ensure that **The Witcher 3** is updated to the Next Next-Gen version (currently v5.01 and that you have **OptiScaler** installed in your game's DirectX 12 folder:
 ```text
 The Witcher 3\
 └── bin\
@@ -62,17 +59,18 @@ The Witcher 3\
         ├── dxgi.dll
         ├── OptiScaler.ini
         └── witcher3.exe
+Once again I reccomend DLSS 5 Autopilot
 ```
 
 ### 2. Running the Tool
 1. Download or clone this repository.
-2. Launch `Antygravity 6.py` (or the compiled executable):
+2. Launch `3 Wiedźmin 3 Najlepszy.py` (or the compiled executable):
    ```powershell
-   python "Antygravity 6.py"
+   python "3 Wiedźmin 3 Najlepszy.py"
    ```
 3. Grant administrator permissions when prompted by Windows UAC.
 4. If it's your first run, the tool will automatically detect your game and user directories. If not detected automatically, a folder selection dialog will open once and save your choice to `dlss5_config.json`.
-5. Launch **The Witcher 3 (DX12)** and load your save!
+5. Launch **The Witcher 3** and load your save!
 6. You will see an in-game notification: `Auto DLSS5 ON` confirming that the engine hooks are active.
 
 ---
@@ -90,9 +88,6 @@ The Witcher 3\
                           ▼ Conversation Ends
                [ RETURN TO GAMEPLAY ]
                DLSS State: Restored to Previous State (OFF / ON)
-```
-
-* **Manual Override**: You can press your OptiScaler hotkey at any time during gameplay. The tool tracks your hotkey via `GetAsyncKeyState` and adapts the restoration logic accordingly.
 
 ---
 
@@ -150,8 +145,7 @@ The script stores its settings in `dlss5_config.json` in the same directory:
 ```
 
 ### OptiScaler Hotkey Detection
-The tool automatically parses `OptiScaler.ini` (under `[DlssNr]` or `[Upscaler]`) to read your configured hotkey. By default, OptiScaler uses:
-* `ToggleKey = 0x6F` (`VK_DIVIDE` / Numpad `/`)
+The tool automatically parses `OptiScaler.ini` (under `[DlssNr]` or `[Upscaler]`) to read your configured hotkey. 
 
 If you customized your toggle key in `OptiScaler.ini`, the tool automatically detects and respects it.
 
@@ -161,7 +155,7 @@ If you customized your toggle key in `OptiScaler.ini`, the tool automatically de
 
 To remove all mod files and restore your game to its 100% original vanilla state:
 ```powershell
-python "Antygravity 6.py" --uninstall
+python "3 Wiedźmin 3 Najlepszy.py" --uninstall
 ```
 This command will:
 1. Delete the `Mods\modAutoOptiCutscene` directory.
@@ -177,7 +171,7 @@ This command will:
 If you wish to compile the script into a standalone `.exe` using **PyInstaller**:
 ```powershell
 pip install pyinstaller
-pyinstaller --onefile --name "DLSS5_Witcher3" "Antygravity 6.py"
+pyinstaller --onefile --name "DLSS5_Witcher3" "3 Wiedźmin 3 Najlepszy.py"
 ```
 The resulting `dist\DLSS5_Witcher3.exe` contains full administrator elevation and frozen runtime support out of the box.
 
@@ -202,7 +196,7 @@ Administrator privileges are required by Windows to access processes in protecte
 
 <details>
 <summary><b>Q: Is my antivirus going to flag this?</b></summary>
-No. Unlike memory scanners and DLL injectors, Version 6 uses <b>pure file-system notification monitoring</b>. It does not read or write process memory (no <code>ReadProcessMemory</code> or <code>VirtualQueryEx</code>), making it completely safe and invisible to security software.
+No. Unlike memory scanners and DLL injectors, 3 Wiedźmin 3 Najlepszy.py uses <b>pure file-system notification monitoring</b>. It does not read or write process memory (no <code>ReadProcessMemory</code> or <code>VirtualQueryEx</code>), making it completely safe and invisible to security software.
 </details>
 
 ---
@@ -216,3 +210,4 @@ This project is open-source and released under the [MIT License](LICENSE).
 ## ⭐ Acknowledgments
 * [OptiScaler](https://github.com/cdozdil/OptiScaler) by cdozdil.
 * CD PROJEKT RED for *The Witcher 3: Wild Hunt*.
+* Gemini by Google for all the coding
