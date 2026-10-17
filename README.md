@@ -1,5 +1,5 @@
 # DLSS 5 - 3 Wiedźmin 3, Najlepszy - 100% created by Gemini, including this readme
-### Automated, Zero-Overhead DLSS / Frame Generation Switcher for The Witcher 3: Wild Hunt v5
+### Automated, Zero-Overhead DLSS 5 Switcher for The Witcher 3: Wild Hunt v5
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-blue.svg)](https://microsoft.com/windows)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-brightgreen.svg)](https://python.org)
